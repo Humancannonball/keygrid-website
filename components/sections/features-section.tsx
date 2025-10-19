@@ -6,11 +6,11 @@ export function FeaturesSection() {
   return (
     <SectionContainer id="features" className="bg-gradient-to-b from-blue-50 via-purple-50/30 to-slate-50">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
           Platform Capabilities
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Everything you need to manage EV charging infrastructure with digital key technology
+          How digital access orchestrator works
         </p>
       </div>
 
@@ -39,27 +39,6 @@ export function FeaturesSection() {
           description="End-to-end encryption, role-based access control, and audit logs keep your fleet secure."
           technicalNote="ISO 27001 compliant, SOC 2 Type II ready"
         />
-      </div>
-
-      {/* Partner Logos */}
-      <div className="mt-16 text-center">
-        <p className="text-sm text-muted-foreground mb-6 font-medium">
-          Trusted Partner Ecosystem
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-          <span className="px-6 py-3 bg-white rounded-lg shadow-sm border border-slate-200 text-lg font-semibold text-slate-700">
-            Ignitis
-          </span>
-          <span className="px-6 py-3 bg-white rounded-lg shadow-sm border border-slate-200 text-lg font-semibold text-slate-700">
-            CityBee
-          </span>
-          <span className="px-6 py-3 bg-white rounded-lg shadow-sm border border-slate-200 text-lg font-semibold text-slate-700">
-            SPARK
-          </span>
-          <span className="px-6 py-3 bg-white rounded-lg shadow-sm border border-slate-200 text-lg font-semibold text-slate-700">
-            Booking.com
-          </span>
-        </div>
       </div>
     </SectionContainer>
   );

@@ -48,7 +48,7 @@ export function HeroSection() {
 
           {/* Main Headline */}
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <span className="text-primary">
               Digital Access
             </span>{" "}
             <br className="hidden sm:block" />
@@ -92,9 +92,9 @@ export function HeroSection() {
           </div>
 
           {/* Stats Row - Compact */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-8">
             <div className="text-center p-3 bg-white rounded-lg shadow-sm border border-slate-200">
-              <div className="text-2xl font-bold text-primary">99.9%</div>
+              <div className="text-2xl font-bold text-primary">99.99%</div>
               <div className="text-xs text-muted-foreground">Uptime</div>
             </div>
             <div className="text-center p-3 bg-white rounded-lg shadow-sm border border-slate-200">
@@ -102,12 +102,8 @@ export function HeroSection() {
               <div className="text-xs text-muted-foreground">Per transaction</div>
             </div>
             <div className="text-center p-3 bg-white rounded-lg shadow-sm border border-slate-200">
-              <div className="text-2xl font-bold text-accent">1%</div>
-              <div className="text-xs text-muted-foreground">vs Custom cost</div>
-            </div>
-            <div className="text-center p-3 bg-white rounded-lg shadow-sm border border-slate-200">
-              <div className="text-2xl font-bold text-primary">€450K</div>
-              <div className="text-xs text-muted-foreground">Pre-Seed</div>
+              <div className="text-2xl font-bold text-accent">99%</div>
+              <div className="text-xs text-muted-foreground">SAVING UP TO</div>
             </div>
           </div>
 
@@ -153,7 +149,7 @@ export function HeroSection() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>OCPP/OCPI</span>
+              <span>Multi Protocol Support</span>
             </div>
           </div>
         </div>

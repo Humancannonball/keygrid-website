@@ -14,7 +14,7 @@ export function StatsSection() {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        <StatCard value="99.9%" label="Platform Uptime" />
+        <StatCard value="99.99%" label="Platform Uptime" />
         <StatCard value="<2s" label="Average Unlock Time" />
         <StatCard value="50%+" label="Utilization Increase" />
         <StatCard value="24/7" label="Support Available" />

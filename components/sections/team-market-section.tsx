@@ -28,17 +28,15 @@ const teamMembers = [
 export function TeamMarketSection() {
   return (
     <SectionContainer className="bg-slate-900 text-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-        {/* Left: Team */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Battle-Tested Team
-          </h2>
-          <p className="text-lg text-slate-300 mb-8">
-            Experienced founders from mobility, SaaS, and security sectors.
-          </p>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          Battle-Tested Team
+        </h2>
+        <p className="text-lg text-slate-300 mb-8 text-center">
+          Experienced founders from mobility, SaaS, and security sectors.
+        </p>
 
-          <div className="space-y-4 mb-8">
+        <div className="space-y-4 mb-8">
             {teamMembers.map((member) => (
               <div
                 key={member.name}
@@ -83,65 +81,13 @@ export function TeamMarketSection() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Advisor */}
-          <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg p-4 border border-slate-700">
-            <p className="text-sm text-slate-400 mb-1">Board Advisor</p>
-            <p className="font-semibold text-white">Dr. Andreas von Eichhorn 🇩🇪</p>
-            <p className="text-sm text-slate-300">BMW Group R&D • Strategy & Technology</p>
-          </div>
         </div>
 
-        {/* Right: Market */}
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Market Convergence
-          </h2>
-          <p className="text-lg text-slate-300 mb-8">
-            Three hypergrowth markets converging into one category: <strong className="text-white">Access Orchestration</strong>
-          </p>
-
-          <div className="space-y-4 mb-8">
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl">🔑</span>
-                <span className="text-2xl font-bold text-blue-400">€9-15B</span>
-              </div>
-              <h3 className="font-semibold text-white mb-1">Digital Key Software</h3>
-              <p className="text-sm text-slate-400">by 2030 • 22-26% CAGR</p>
-            </div>
-
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl">⚡</span>
-                <span className="text-2xl font-bold text-green-400">€8-28B</span>
-              </div>
-              <h3 className="font-semibold text-white mb-1">EV Charging Software</h3>
-              <p className="text-sm text-slate-400">by 2030 • 23-34% CAGR</p>
-            </div>
-
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl">🚪</span>
-                <span className="text-2xl font-bold text-orange-400">~€15B</span>
-              </div>
-              <h3 className="font-semibold text-white mb-1">Cloud Access Control</h3>
-              <p className="text-sm text-slate-400">by 2030</p>
-            </div>
-          </div>
-
-          {/* Value Props */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-              <div className="text-xl font-bold text-white">OCPP/OCPI</div>
-              <div className="text-xs text-slate-400">Open Standards</div>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-              <div className="text-xl font-bold text-white">23+ moat</div>
-              <div className="text-xs text-slate-400">Network Effects</div>
-            </div>
-          </div>
+        {/* Advisor */}
+        <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg p-4 border border-slate-700 max-w-2xl mx-auto">
+          <p className="text-sm text-slate-400 mb-1">Board Advisor</p>
+          <p className="font-semibold text-white">Dr. Andreas von Eichhorn 🇩🇪</p>
+          <p className="text-sm text-slate-300">BMW Group R&D • Strategy & Technology</p>
         </div>
       </div>
     </SectionContainer>
