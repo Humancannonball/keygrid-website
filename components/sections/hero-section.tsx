@@ -1,9 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, X } from "lucide-react";
 
 export function HeroSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  
+  // IMPORTANT: Replace this with your YouTube video ID
+  // Example: If your video URL is https://www.youtube.com/watch?v=ABC123XYZ
+  // Then your videoId should be: "ABC123XYZ"
+  const youtubeVideoId = "d6mGHcdc2VI"; // ← KeyGrid Pitch Video
+  
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
     if (element) {
@@ -76,10 +84,10 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               className="text-lg px-8 py-6 h-auto group"
-              onClick={scrollToFeatures}
+              onClick={() => setIsVideoOpen(true)}
             >
               <Play className="mr-2 h-5 w-5" />
-              See How It Works
+              Watch Pitch Video
             </Button>
           </div>
 
@@ -150,6 +158,37 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {isVideoOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div 
+            className="relative w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+              aria-label="Close video"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            {/* YouTube embed */}
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
+              title="KeyGrid Pitch Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

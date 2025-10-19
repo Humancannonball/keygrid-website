@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -46,9 +47,13 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            {/* Option 1: If you have a logo file, uncomment this and replace 'logo.svg' with your logo filename */}
+            <Image src="/logo.png" alt="KeyGrid" width={120} height={40} className="h-8 w-auto" />
+            
+            {/* Option 2: Keep gradient text if you prefer (current) */}
+            {/* <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               KeyGrid
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation */}

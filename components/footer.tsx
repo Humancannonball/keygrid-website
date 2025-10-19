@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Linkedin, Twitter } from "lucide-react";
 
 const footerSections = [
@@ -38,9 +39,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+            {/* Option 1: If you have a logo file, uncomment this */}
+            <Image src="/logo.png" alt="KeyGrid" width={120} height={40} className="h-8 w-auto mb-4" />
+            
+            {/* Option 2: Keep gradient text if you prefer (current) */}
+            {/* <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
               KeyGrid
-            </div>
+            </div> */}
             <p className="text-slate-400 mb-6 max-w-sm">
               Smart keys for smarter charging. Transform your fleet charging
               infrastructure with digital key technology.
@@ -85,30 +90,6 @@ export function Footer() {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* Contact Info */}
-        <div className="border-t border-slate-800 pt-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-400">
-            <div>
-              <strong className="text-white">Email:</strong>{" "}
-              <a
-                href="mailto:contact@keygrid.cloud"
-                className="hover:text-white transition-colors"
-              >
-                contact@keygrid.cloud
-              </a>
-            </div>
-            <div>
-              <strong className="text-white">Support:</strong>{" "}
-              <a
-                href="mailto:support@keygrid.cloud"
-                className="hover:text-white transition-colors"
-              >
-                support@keygrid.cloud
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
